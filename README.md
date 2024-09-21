@@ -146,4 +146,43 @@ print(f"Annual CO₂ Emissions: {annual_co2_emissions:.2f} kg CO₂/year")
 print(f"CO₂ Emissions per m²/year: {co2_per_m2_per_year:.2f} kg CO₂/m²/year")
 
 
+
+# stating the types of beams listed in the appendix page 2
+DR22250 = 0
+DR26230 = 0
+D50500 = 0
+D22400 = 0
+
+for entity in model.by_type("IfcBeam"):
+   for relDefinesByProperties in entity.IsDefinedBy:
+        for prop in relDefinesByProperties.RelatingPropertyDefinition.HasProperties:
+            if prop.NominalValue.wrappedValue == "Edge beam (DR): STR - Edge Deltabeam - DR22-250":
+                for relDefinesByProperties in entity.IsDefinedBy:
+                    for prop in relDefinesByProperties.RelatingPropertyDefinition.HasProperties:
+                        if prop.Name == "Length":
+                            DR22250 += prop.NominalValue.wrappedValue
+            if prop.NominalValue.wrappedValue == "Intermediate beam (D): STR - Intermediate Deltabeam - D22-400":
+                for relDefinesByProperties in entity.IsDefinedBy:
+                    for prop in relDefinesByProperties.RelatingPropertyDefinition.HasProperties:
+                        if prop.Name == "Length":
+                            D22400 += prop.NominalValue.wrappedValue
+            if prop.NominalValue.wrappedValue == "Intermediate beam (D): STR - Intermediate Deltabeam - D50-500":
+                for relDefinesByProperties in entity.IsDefinedBy:
+                    for prop in relDefinesByProperties.RelatingPropertyDefinition.HasProperties:
+                        if prop.Name == "Length":
+                            D50500 += prop.NominalValue.wrappedValue
+            if prop.NominalValue.wrappedValue == "Edge beam (DR): STR - Edge Deltabeam - DR26-230":
+                for relDefinesByProperties in entity.IsDefinedBy:
+                    for prop in relDefinesByProperties.RelatingPropertyDefinition.HasProperties:
+                        if prop.Name == "Length":
+                            DR26230 += prop.NominalValue.wrappedValue
+
+print(f"\nThere are {round(D22400/1000)} meters of D22-400 in the model")
+print(f"\nThere are {round(D50500/1000)} meters of D50-500 in the model")
+print(f"\nThere are {round(DR26230/1000)} meters of DR26-230 in the model")
+print(f"\nThere are {round(DR22250/1000)} meters of DR22-250 in the model")
+
+
+
+
 "
