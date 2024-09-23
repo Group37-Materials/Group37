@@ -44,3 +44,4 @@ def calc_beam_length():
     print(f"\nThere are {round(DR22250/1000)} meters of DR22-250 in the model")
 
     # Return from the function
+    return
