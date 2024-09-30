@@ -1,4 +1,4 @@
-def calc_beam_length():
+def calc_beam_length(model):
     # Initialize counters for different types of beams listed in the appendix page 2
     DR22250 = 0  # Counter for "Edge beam (DR): STR - Edge Deltabeam - DR22-250"
     DR26230 = 0  # Counter for "Edge beam (DR): STR - Edge Deltabeam - DR26-230"
