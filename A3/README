@@ -1,1 +1,6 @@
+While working with the IFC-models, a few problems appeared due to missing information in the models. At first a code was made that should retreive information about 
+the volumes for a building element. Here it was noticed that the model XXX did not destinguish between the slaps and beams. The code was then made specifically to avoid any
+element containing the word "slap". This was not considered to be a good general solution, but was nessesary for the code to work with the models available. 
+A second problem occured when the material property was to be extracted for the element "Beam". There were no material associated with the beams.
+
 
