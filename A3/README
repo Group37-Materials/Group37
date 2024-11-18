@@ -1,6 +1,6 @@
 While working with the IFC-models, a few problems appeared due to missing information in the models. At first a code was made that should retreive information about 
-the volumes for a building element. Here it was noticed that the model XXX did not destinguish between the slaps and beams. The code was then changed to look for elements
-containing a word, such as slap, beam or column. It should be noted that When running the code on model XXX and looking for "Beam", the slap is considered a beam, since this
+the volumes for a building element. Here it was noticed that the model CES_BLD_24_06_STR did not destinguish between the slaps and beams. The code was then changed to look for elements
+containing a word, such as slap, beam or column. It should be noted that When running the code on model CES_BLD_24_06_STR and looking for "Beam", the slap is considered a beam, since this
 is a specific problem with this model, the codes does not acount for this. 
 Also some elements did not contain the propertie for the area or volume, therefore the code calculate these properties
 using the x,y and z dimension, this should make the code work more generally.  
