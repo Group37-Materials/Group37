@@ -8,5 +8,15 @@ A second problem occured when the material property was to be extracted for the 
 made as general as possible, it was decided to try to use it on another element, where the actual material could be retreived. The code should be able to work on any building 
 element, if the model consist of the correct information. If the code is used on the element slap, instead of beam, the material and volume could be retreived correctly. 
 
+STUFF WE MISS
+some code that interact with the user
+first input: "what element would you like to investegate"? beam/slap/column/wall ?
+  output: number of elements, material type, volumen 
+Second input: "would you like a CO2 calculation for steel ? wood ? concrete ? or All ?"
+  output: "you have shosen XXX here is the total amount of this material/element"
+Third input "would you like an calculation of the CO2 footprint ?"
+  output: "co2 footprint"
+
+
 
 
