@@ -17,7 +17,7 @@ If the code is used on the element Slab instead of Beam, the material and volume
 The areas of the materials are then converted to CO2 footprints, based on the material properties of the element. 
 Finally, a plot is generated to visualize the distribution of CO2 for the building elements.
 
-# Runnning the tool
+# Running the tool
 The user will be prompted to choose an element type. Afterward, the user will be prompted to choose whether to include material or not. The calculations of the CO2 footprint are then visualized.
 
 # Advanced building Design 
