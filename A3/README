@@ -1,6 +1,6 @@
 About the tool
-The tool should be able solve the claim from A2: calculation CO2 footprint for building elements in the building. 
-
+The tool should be able solve the claim from A2: calculation of CO2 footprint for building elements in the building. 
+The claim is found on page 21 in the building project 2410, pm repport, where a figure shows the CO2 footprint for building materials.
 
 While working with the IFC-models, a few problems appeared due to missing information in the models. At first a code was made that should retreive information about 
 the volumes for a building element. Here it was noticed that the model CES_BLD_24_06_STR did not destinguish between the slaps and beams. 
@@ -11,7 +11,14 @@ using the x,y and z dimension, this should make the code work more generally.
 A second problem occured when the material property was to be extracted for the element "Beam". There were no material associated with the beams. Since the code should be made 
 made as general as possible, it was decided to try to use it on another element, where the actual material could be retreived. The code should be able to work on any building 
 element, if the model consist of the correct information. 
-If the code is used on the element slap, instead of beam, the material and volume could be retreived correctly. 
+If the code is used on the element slap, instead of beam, the material and volume could be retreived correctly.
+The areas of the material is then converted to co2 footprint, depending on the material properties for the element. 
+Finally a plot is computed to visualize the distribution of CO2 for the building elements.
+
+
+As stated above the tool will only work properly if there are information about the dimension and material for the element that will be 
+investigated. Also the model should destinguish correctly between building elements. 
+
 
 
 
