@@ -1,24 +1,28 @@
 #About the tool
-The tool should be able solve the claim from A2: calculation of CO2 footprint for building elements in the building. 
-The claim is found on page 21 in the building project 2410, pm repport, where a figure shows the CO2 footprint for building materials.
+The tool is designed to solve the claim from A2: the calculation of the CO2 footprint for building elements in the building.
+The claim is found on page 21 of the building project 2410, PM report, where a figure shows the CO2 footprint for building materials.
 
-While working with the IFC-models, a few problems appeared due to missing information in the models. At first a code was made that should retreive information about 
-the volumes for a building element. Here it was noticed that the model CES_BLD_24_06_STR did not destinguish between the slaps and beams. 
-This is assumed to be a specific problem for this model and the final code does not account for this problen.
-This decision was made in order to make the code general and not specifically for one model. 
-Also some elements did not contain the properties for the area or volume, therefore the code calculate these properties
-using the x,y and z dimension, this should make the code work more generally.  
-A second problem occured when the material property was to be extracted for the element "Beam". There were no material associated with the beams. Since the code should be made 
-made as general as possible, it was decided to try to use it on another element, where the actual material could be retreived. The code should be able to work on any building 
-element, if the model consist of the correct information. 
-If the code is used on the element slap, instead of beam, the material and volume could be retreived correctly.
-The areas of the material is then converted to co2 footprint, depending on the material properties for the element. 
-Finally a plot is computed to visualize the distribution of CO2 for the building elements.
+While working with the IFC models, a few problems appeared due to missing information in the models. 
+Initially, a code was created to retrieve information about the volumes of building elements. 
+During this process, it was noticed that the model CES_BLD_24_06_STR did not distinguish between slabs and beams. 
+This issue is assumed to be specific to this model, and the final code does not account for this problem.
+This decision was made to ensure the code remains general and not tailored to a single model. 
+Additionally, some elements lacked properties for area or volume. 
+Therefore, the code calculates these properties using the x, y, and z dimensions, ensuring it works more generally.
+
+A second issue occurred when attempting to extract the material property for the element "Beam." 
+No material was associated with the beams. Since the code should be as general as possible, it was decided to test it on another element where the material could be retrieved. 
+The code should work for any building element, provided the model contains the correct information.
+If the code is used on the element Slab instead of Beam, the material and volume can be retrieved correctly.
+The areas of the materials are then converted to CO2 footprints, based on the material properties of the element. 
+Finally, a plot is generated to visualize the distribution of CO2 for the building elements.
 
 #Runnning the tool
 The user will be prompted to chose an element type. After user is promted to chose material or not.
 Calculations of CO2 is visualized. 
 
+#Advanced building Design 
+Assuming that the BIM model is completed in stage B, this tool should be applied at this stage. 
 As stated above the tool will only work properly if there are information about the dimension and material for the element that will be 
 investigated. Also the model should destinguish correctly between building elements. 
 
