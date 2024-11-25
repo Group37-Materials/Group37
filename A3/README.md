@@ -1,4 +1,4 @@
-#About the tool
+# About the tool
 The tool is designed to solve the claim from A2: the calculation of the CO2 footprint for building elements in the building.
 The claim is found on page 21 of the building project 2410, PM report, where a figure shows the CO2 footprint for building materials.
 
@@ -17,12 +17,12 @@ If the code is used on the element Slab instead of Beam, the material and volume
 The areas of the materials are then converted to CO2 footprints, based on the material properties of the element. 
 Finally, a plot is generated to visualize the distribution of CO2 for the building elements.
 
-#Runnning the tool
+# Runnning the tool
 The user will be prompted to choose an element type. 
 Afterward, the user will be prompted to choose whether to include material or not.
 The calculations of the CO2 footprint are then visualized.
 
-#Advanced building Design 
+# Advanced building Design 
 Assuming that the BIM model is completed in Stage B, this tool should be applied at this stage.
 As stated above, the tool will only work properly if there is information about the dimensions and material of the element being investigated. 
 Additionally, the model should correctly distinguish between building elements.
