@@ -18,13 +18,15 @@ The areas of the materials are then converted to CO2 footprints, based on the ma
 Finally, a plot is generated to visualize the distribution of CO2 for the building elements.
 
 # Runnning the tool
-The user will be prompted to choose an element type. 
-Afterward, the user will be prompted to choose whether to include material or not.
-The calculations of the CO2 footprint are then visualized.
+The user will be prompted to choose an element type. Afterward, the user will be prompted to choose whether to include material or not. The calculations of the CO2 footprint are then visualized.
 
 # Advanced building Design 
 Assuming that the BIM model is completed in Stage B, this tool should be applied at this stage.
+Anyone that are involved in projecting a building could interested in our tool ! Engineers, architects, and contractors are all potential users.
 As stated above, the tool will only work properly if there is information about the dimensions and material of the element being investigated. 
+
+# IDS 
+All building elements should have a material propertie. 
 Additionally, the model should correctly distinguish between building elements.
 
 
