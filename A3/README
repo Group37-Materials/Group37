@@ -1,21 +1,17 @@
+About the tool
+The tool should be able solve the claim from A2: calculation CO2 footprint for building elements in the building. 
+
+
 While working with the IFC-models, a few problems appeared due to missing information in the models. At first a code was made that should retreive information about 
-the volumes for a building element. Here it was noticed that the model CES_BLD_24_06_STR did not destinguish between the slaps and beams. The code was then changed to look for elements
-containing a word, such as slap, beam or column. It should be noted that When running the code on model CES_BLD_24_06_STR and looking for "Beam", the slap is considered a beam, since this
-is a specific problem with this model, the codes does not acount for this. 
-Also some elements did not contain the propertie for the area or volume, therefore the code calculate these properties
+the volumes for a building element. Here it was noticed that the model CES_BLD_24_06_STR did not destinguish between the slaps and beams. 
+This is assumed to be a specific problem for this model and the final code does not account for this problen.
+This decision was made in order to make the code general and not specifically for one model. 
+Also some elements did not contain the properties for the area or volume, therefore the code calculate these properties
 using the x,y and z dimension, this should make the code work more generally.  
 A second problem occured when the material property was to be extracted for the element "Beam". There were no material associated with the beams. Since the code should be made 
 made as general as possible, it was decided to try to use it on another element, where the actual material could be retreived. The code should be able to work on any building 
-element, if the model consist of the correct information. If the code is used on the element slap, instead of beam, the material and volume could be retreived correctly. 
-
-STUFF WE MISS
-some code that interact with the user
-first input: "what element would you like to investegate"? beam/slap/column/wall ?
-  output: number of elements, material type, volumen 
-Second input: "would you like a CO2 calculation for steel ? wood ? concrete ? or All ?"
-  output: "you have shosen XXX here is the total amount of this material/element"
-Third input "would you like an calculation of the CO2 footprint ?"
-  output: "co2 footprint"
+element, if the model consist of the correct information. 
+If the code is used on the element slap, instead of beam, the material and volume could be retreived correctly. 
 
 
 
