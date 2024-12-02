@@ -12,7 +12,7 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
 
 ## Function to calculate and sum surface area, volume, and identify materials for specified element type
 ### This part will loop through the model and extract volumes and areas. 
-def calculate_surface_area_volume_and_materials(element_type):
+    #def calculate_surface_area_volume_and_materials(element_type):
     # Clear previous totals
     area_totals.clear()
     volume_totals.clear()
@@ -21,7 +21,7 @@ def calculate_surface_area_volume_and_materials(element_type):
 
 ## Function to perform LCA calculations
 ### this part calculate the CO2 footprint
-def perform_lca(material_type, element_type):
+    #def perform_lca(material_type, element_type):
     total_co2 = 0
     normalized_material = material_type.strip().lower()  # Normalize the material type for matching
     for subtype, volume in volume_totals.items():
@@ -35,115 +35,8 @@ def perform_lca(material_type, element_type):
 
 
 ## Function to export data to an HTML file with Plotly.js
-###
-def export_to_html(data, file_name="LCA_results.html"):
-    # Get the current project directory
-    save_path = bpy.path.abspath("//")
-
-    # Check if the current project directory is valid
-    if not save_path or not os.path.exists(save_path):
-        print("The current project directory is not valid. Using the Desktop as the fallback.")
-        save_path = os.path.expanduser("~\\Desktop\\BIM")
-    
-    # Ensure the directory exists
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-    
-    # Ensure the file name is correct
-    file_path = os.path.join(save_path, file_name)
-    
-    try:
-        # Create the HTML content
-        html_content = f"""
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>LCA Results - CO2 Footprint</title>
-            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-            <style>
-                body {{
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 20px;
-                    background-color: #f4f4f4;
-                }}
-                .chart-container {{
-                    width: 100%;
-                    max-width: 1000px;
-                    margin: auto;
-                }}
-            </style>
-        </head>
-        <body>
-            <h1>LCA Results - CO₂ Footprint</h1>
-            <div class="chart-container">
-                <div id="bar-chart"></div>
-            </div>
-            <script>
-                var surface_area_data = {list(lca_data_for_visualization["Surface Area"].values())};
-                var volume_data = {list(lca_data_for_visualization["Volume"].values())};
-                var co2_data = {list(lca_data_for_visualization["CO2 Footprint"].values())};
-                var labels = {list(lca_data_for_visualization["Surface Area"].keys())};
-
-                var data = [
-                    {{
-                        x: labels,
-                        y: surface_area_data,
-                        type: 'bar',
-                        name: 'Surface Area (m²)',
-                        marker: {{color: 'rgb(76, 175, 80)'}}
-                    }},
-                    {{
-                        x: labels,
-                        y: volume_data,
-                        type: 'bar',
-                        name: 'Volume (m³)',
-                        marker: {{color: 'rgb(0, 123, 255)'}}
-                    }},
-                    {{
-                        x: labels,
-                        y: co2_data,
-                        type: 'bar',
-                        name: 'CO₂ Footprint (kg)',
-                        marker: {{color: 'rgb(255, 99, 71)'}}
-                    }},
-                ];
-
-                var layout = {{
-                    title: 'CO₂ Footprint, Surface Area, and Volume for Construction Elements',
-                    barmode: 'group',
-                    xaxis: {{
-                        title: 'Element Type',
-                    }},
-                    yaxis: {{
-                        title: 'Values',
-                        rangemode: 'tozero',
-                    }},
-                    showlegend: true,
-                }};
-                
-                Plotly.newPlot('bar-chart', data, layout);
-            </script>
-        </body>
-        </html>
-        """
-
-        # Write HTML to file
-        with open(file_path, 'w') as f:
-            f.write(html_content)
-        
-        print(f"Data exported to {file_path}")
-        
-        # Automatically open the HTML file in the default browser
-        webbrowser.open(f'file://{file_path}')
-
-    except PermissionError:
-        print(f"PermissionError: Unable to write to the file {file_path}. Please check file permissions.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
+    #def export_to_html(data, file_name="LCA_results.html"):
+ 
 
 # Menu to prompt user for material type
 def prompt_for_material_type(element_type):
