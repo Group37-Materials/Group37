@@ -10,8 +10,7 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
     "Wood": 0.03
 
 
-## Function to calculate and sum surface area, volume, and identify materials for specified element ty
-This part will loop through the model and extract volumes and areas. 
+## Function to calculate and sum surface area, volume, and identify materials for specified element ty. This part will loop through the model and extract volumes and areas. 
     #def calculate_surface_area_volume_and_materials(element_type):
     # Clear previous totals
     area_totals.clear()
