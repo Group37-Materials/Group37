@@ -4,7 +4,7 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
 
 # Markdown of the code 
 ## LCA data: CO₂ footprint per cubic meter for each material
-material_co2_footprint = {
+    #material_co2_footprint = {
     "Steel": 7.8,  # Example values: Replace with accurate data
     "Concrete": 0.2,
     "Wood": 0.03
