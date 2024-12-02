@@ -10,8 +10,8 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
     "Wood": 0.03
 
 
-## Function to calculate and sum surface area, volume, and identify materials for specified element type
-### This part will loop through the model and extract volumes and areas. 
+## Function to calculate and sum surface area, volume, and identify materials for specified element ty
+This part will loop through the model and extract volumes and areas. 
     #def calculate_surface_area_volume_and_materials(element_type):
     # Clear previous totals
     area_totals.clear()
@@ -19,8 +19,8 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
     materials.clear()
     
 
-## Function to perform LCA calculations
-### this part calculate the CO2 footprint
+## Function to perform LCA calculations, this part calculate the CO2 footprint 
+
     #def perform_lca(material_type, element_type):
     total_co2 = 0
     normalized_material = material_type.strip().lower()  # Normalize the material type for matching
@@ -38,55 +38,7 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
     #def export_to_html(data, file_name="LCA_results.html"):
  
 
-# Menu to prompt user for material type
-def prompt_for_material_type(element_type):
-    while True:
-        print("\nChoose the material type for LCA calculation or go back:")
-        print("1. Steel")
-        print("2. Concrete")
-        print("3. Wood")
-        print("4. Go Back")
-        choice = input("Enter the number corresponding to your choice: ").strip()
-        
-        material_mapping = {"1": "Steel", "2": "Concrete", "3": "Wood"}
-        if choice == "4":
-            return  # Go back to the previous menu
-        material_type = material_mapping.get(choice)
-        if material_type:
-            total_co2 = perform_lca(material_type, element_type)
-            return total_co2
-        else:
-            print("Invalid choice. Please try again.")
-
-
-# Prompt user for the element type to analyze
-def prompt_for_element_type():
-    while True:
-        print("\nChoose the element type to analyze:")
-        print("1. Slabs")
-        print("2. Beams")
-        print("3. Columns")
-        print("4. Exit")
-        choice = input("Enter the number corresponding to your choice: ").strip()
-        
-        element_mapping = {"1": "Slab", "2": "Beam", "3": "Column"}
-        if choice == "4":
-            print("Exiting the script.")
-            break
-        element_type = element_mapping.get(choice)
-        if element_type:
-            calculate_surface_area_volume_and_materials(element_type)
-            total_co2 = prompt_for_material_type(element_type)
-            print(f"Total CO2 Footprint for {element_type}: {total_co2:.2f} kg CO₂")
-            
-            # Export the results to an HTML bar chart
-            export_to_html(lca_data_for_visualization)
-        else:
-            print("Invalid choice. Please try again.")
-
-
-# Clear previous selections
-bpy.ops.object.select_all(action='DESELECT')
-
-# Execute the element type prompt
-prompt_for_element_type()
+## Menu to prompt user for material type and element type 
+    #def prompt_for_material_type(element_type):
+    #def prompt_for_element_type():
+    
