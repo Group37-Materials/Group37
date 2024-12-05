@@ -42,5 +42,5 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
     #def prompt_for_element_type():
 
 # Short summary
-Title: CO2 footprint of building element
+Title: CO2 footprint of building element\\
 The tool should be able to calculate the CO2 footprint for an IFC-element. It will then visualize it for the user with a bar plot.   
