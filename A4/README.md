@@ -43,4 +43,5 @@ part 2 https://www.youtube.com/watch?v=Gs3V-AdHwMI
 
 # Short summary
 Title: CO2 footprint of building element.
+
 The tool should be able to calculate the CO2 footprint for an IFC-element. It will then visualize it for the user with a bar plot.   
