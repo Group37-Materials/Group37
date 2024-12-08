@@ -19,8 +19,9 @@ One of the most interesting aspects of the course was how it encouraged students
 
 Looking back, I began the course with basic knowledge and saw myself as a beginner. By the end, I could confidently use the tools for material analysis and CO2 calculations. Although I have learned a lot, there is still more to explore, especially advanced techniques, which I look forward to studying in the future.
 # Abdallah s203753
+
 # Group question
-did the tool address the use case you identified? Our tool managed to adress the use case?
+did the tool address the use case you identified?
 Yes, our tool addressed the use case, but with some limitations. We couldn't extract the volume directly from the model due to missing data, so the tool calculates volume based on the x, y, and z directions, making it suitable only for vertical and horizontal elements. This means it still needs improvements to work with all types of elements. It could also be interesting to make the script suitable to be used with other LCA programs, such as LCAbyg, to enhance its functionality.
 # Wrap-up:
 A1: In the beginning, our group decided to focus on materials-LCA. We spent some time learning Blender and Python, which helped us build the foundational skills and confidence we needed.
