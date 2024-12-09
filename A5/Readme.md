@@ -19,7 +19,18 @@ One of the most interesting aspects of the course was how it encouraged students
 
 Looking back, I began the course with basic knowledge and saw myself as a beginner. By the end, I could confidently use the tools for material analysis and CO2 calculations. Although I have learned a lot, there is still more to explore, especially advanced techniques, which I look forward to studying in the future.
 # Abdallah s203753
+The course was a mix of positives and challenges. On one hand, I learned new skills like using Blender and Python for OpenBIM workflows. On the other hand, it sometimes felt unstructured, and I wasn’t always sure how everything fit together.
 
+What I Learned
+I learned how to calculate material volumes and CO2 emissions using scripts, which I think is a useful skill. The course gave me a glimpse into the potential of OpenBIM tools, especially in areas like sustainability and data analysis. Starting with little to no knowledge, I now have a basic understanding of how these tools work.
+
+What I Still Need to Learn
+There’s still a lot I need to improve on, like creating IFC models and understanding advanced scripting techniques. But I feel like I’m only scratching the surface of what’s possible.
+
+OpenBIM in the Future
+I can see OpenBIM being useful in professional projects, especially because of its focus on collaboration and efficiency. For my thesis, I did not yet figured out what i shall work with. 
+Wrap-Up
+Overall, the course introduced me to new tools and concepts. At times, I felt like there wasn’t enough guidance, and I had to figure things out on my own. While that was frustrating, it also forced me (as a student) to be more independent, which is a valuable skill in itself. I see this as a solid starting point, but there’s still a lot more to learn.
 # Group question
 did the tool address the use case you identified?
 Yes, our tool addressed the use case, but with some limitations. We couldn't extract the volume directly from the model due to missing data, so the tool calculates volume based on the x, y, and z directions, making it suitable only for vertical and horizontal elements. This means it still needs improvements to work with all types of elements. It could also be interesting to make the script suitable to be used with other LCA programs, such as LCAbyg, to enhance its functionality.
